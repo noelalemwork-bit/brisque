@@ -1,0 +1,39 @@
+{
+  "name": "brisque",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Quantum Risk — Moth Hack 2026 / Global Quantum Game Jam",
+  "scripts": {
+    "dev": "concurrently -k -n client,server -c cyan,magenta \"vite\" \"node --watch src/server/index.js\"",
+    "dev:client": "vite",
+    "dev:server": "node --watch src/server/index.js",
+    "build": "vite build",
+    "start": "node src/server/index.js",
+    "check:map": "node tools/check-map.js",
+    "check:quantum": "node tools/check-quantum.js",
+    "check:game": "node tools/check-game.js",
+    "check:pawns": "node tools/check-pawns.js",
+    "check:branching": "node tools/check-branching.js",
+    "check:forge": "node tools/check-forge.mjs",
+    "check:majorana": "node tools/check-majorana.mjs",
+    "build:itch": "node tools/package-itch.mjs",
+    "preview": "vite preview --port 5190 --strictPort",
+    "moth:qrng": "node tools/moth/fetch-qrng.mjs",
+    "moth:bench": "node tools/moth/bench.mjs"
+  },
+  "dependencies": {
+    "d3-delaunay": "^6.0.4",
+    "quantum-forge": "^3.1.0",
+    "simplex-noise": "^4.0.3",
+    "three": "^0.186.1",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "puppeteer-core": "^25.12.0",
+    "sharp": "^0.35.4",
+    "vite": "^8.3.1",
+    "wrangler": "^4.141.0"
+  }
+}

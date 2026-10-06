@@ -1,0 +1,37 @@
+{
+ "label": "tomography-3army-1024",
+ "engine": "tomography-api-v2",
+ "params": {
+  "circuit_qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[2];\ncreg c[2];\nry(0.47588224966041653) q[1];\nry(0.7559694104239078) q[0];\ncx q[1],q[0];\nry(0.7559694104239078) q[0];\ncx q[1],q[0];\nmeasure q -> c;",
+  "shots": 1024,
+  "double_tomography": false,
+  "mutual_information": false,
+  "classical_mutual_information": false
+ },
+ "job_id": "57115e9b-0959-4972-beeb-0602cf724430",
+ "status": "error",
+ "timings": {
+  "submit_s": 2.04,
+  "total_s": 63.43
+ },
+ "timeline": [
+  [
+   "submitted",
+   2.04
+  ],
+  [
+   "failed",
+   63.43
+  ]
+ ],
+ "result": null,
+ "error": "job failed: engine_timeout The engine did not respond in time — retry the job",
+ "ran_at": "2026-10-05T22:55+0300",
+ "previous_attempts": [
+  {
+   "job_id": "68476af0-a8ce-4241-a2f6-de4b7b7413f1",
+   "error": "job failed: engine_timeout The engine did not respond in time — retry the job",
+   "total_s": 63.7
+  }
+ ]
+}

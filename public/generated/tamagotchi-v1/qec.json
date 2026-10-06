@@ -1,0 +1,574 @@
+{
+ "engine": "tamagotchi-v1",
+ "date": "2026-10-05T19:46:06.156Z",
+ "runs": [
+  {
+   "level": "low",
+   "p": 0.002,
+   "rounds": 1,
+   "params": {
+    "code": "steane",
+    "method": "stabilizer",
+    "n_logical": 1,
+    "shots": 2000,
+    "seed": 7,
+    "actions": [
+     [
+      "X",
+      0
+     ],
+     [
+      "SE",
+      0
+     ]
+    ],
+    "noise": {
+     "p_gate": 0.002,
+     "p_1q": 0.001,
+     "p_meas": 0.002,
+     "p_idle": 0.0004
+    }
+   },
+   "job_id": "32f29094-2ba5-4937-8746-dfeb93cf6d52",
+   "ms": 29655,
+   "result": {
+    "output": {
+     "code": "steane",
+     "corrections_applied": 252,
+     "logical_error_count": 39,
+     "n_logical": 1,
+     "noise": {
+      "p_1q": 0.001,
+      "p_gate": 0.002,
+      "p_idle": 0.0004,
+      "p_meas": 0.002
+     },
+     "per_logical": [
+      {
+       "expected": 1,
+       "logical_error_rate": 0.019499999999999962,
+       "logical_qubit": 0,
+       "success_rate": 0.9805
+      }
+     ],
+     "shots": 2000,
+     "simulator": {
+      "method": "stabilizer",
+      "transpiled": false
+     },
+     "success_rate": 0.9805,
+     "successful_shots": 1961,
+     "syndromes_detected": 252
+    }
+   }
+  },
+  {
+   "level": "low",
+   "p": 0.002,
+   "rounds": 2,
+   "params": {
+    "code": "steane",
+    "method": "stabilizer",
+    "n_logical": 1,
+    "shots": 2000,
+    "seed": 7,
+    "actions": [
+     [
+      "X",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ]
+    ],
+    "noise": {
+     "p_gate": 0.002,
+     "p_1q": 0.001,
+     "p_meas": 0.002,
+     "p_idle": 0.0004
+    }
+   },
+   "job_id": "680e8ad1-6bf2-40c8-b410-7af58fa8006b",
+   "ms": 8071,
+   "result": {
+    "output": {
+     "code": "steane",
+     "corrections_applied": 510,
+     "logical_error_count": 57,
+     "n_logical": 1,
+     "noise": {
+      "p_1q": 0.001,
+      "p_gate": 0.002,
+      "p_idle": 0.0004,
+      "p_meas": 0.002
+     },
+     "per_logical": [
+      {
+       "expected": 1,
+       "logical_error_rate": 0.02849999999999997,
+       "logical_qubit": 0,
+       "success_rate": 0.9715
+      }
+     ],
+     "shots": 2000,
+     "simulator": {
+      "method": "stabilizer",
+      "transpiled": false
+     },
+     "success_rate": 0.9715,
+     "successful_shots": 1943,
+     "syndromes_detected": 510
+    }
+   }
+  },
+  {
+   "level": "low",
+   "p": 0.002,
+   "rounds": 4,
+   "params": {
+    "code": "steane",
+    "method": "stabilizer",
+    "n_logical": 1,
+    "shots": 2000,
+    "seed": 7,
+    "actions": [
+     [
+      "X",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ]
+    ],
+    "noise": {
+     "p_gate": 0.002,
+     "p_1q": 0.001,
+     "p_meas": 0.002,
+     "p_idle": 0.0004
+    }
+   },
+   "job_id": "6c0155b0-fdb0-4c4c-ab93-02359183714a",
+   "ms": 19341,
+   "result": {
+    "output": {
+     "code": "steane",
+     "corrections_applied": 990,
+     "logical_error_count": 96,
+     "n_logical": 1,
+     "noise": {
+      "p_1q": 0.001,
+      "p_gate": 0.002,
+      "p_idle": 0.0004,
+      "p_meas": 0.002
+     },
+     "per_logical": [
+      {
+       "expected": 1,
+       "logical_error_rate": 0.04800000000000004,
+       "logical_qubit": 0,
+       "success_rate": 0.952
+      }
+     ],
+     "shots": 2000,
+     "simulator": {
+      "method": "stabilizer",
+      "transpiled": false
+     },
+     "success_rate": 0.952,
+     "successful_shots": 1904,
+     "syndromes_detected": 990
+    }
+   }
+  },
+  {
+   "level": "low",
+   "p": 0.002,
+   "rounds": 8,
+   "params": {
+    "code": "steane",
+    "method": "stabilizer",
+    "n_logical": 1,
+    "shots": 2000,
+    "seed": 7,
+    "actions": [
+     [
+      "X",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ]
+    ],
+    "noise": {
+     "p_gate": 0.002,
+     "p_1q": 0.001,
+     "p_meas": 0.002,
+     "p_idle": 0.0004
+    }
+   },
+   "job_id": "a15b648f-5ddf-41a2-bd5b-b92f19665722",
+   "ms": 14207,
+   "result": {
+    "output": {
+     "code": "steane",
+     "corrections_applied": 1984,
+     "logical_error_count": 162,
+     "n_logical": 1,
+     "noise": {
+      "p_1q": 0.001,
+      "p_gate": 0.002,
+      "p_idle": 0.0004,
+      "p_meas": 0.002
+     },
+     "per_logical": [
+      {
+       "expected": 1,
+       "logical_error_rate": 0.08099999999999996,
+       "logical_qubit": 0,
+       "success_rate": 0.919
+      }
+     ],
+     "shots": 2000,
+     "simulator": {
+      "method": "stabilizer",
+      "transpiled": false
+     },
+     "success_rate": 0.919,
+     "successful_shots": 1838,
+     "syndromes_detected": 1984
+    }
+   }
+  },
+  {
+   "level": "high",
+   "p": 0.01,
+   "rounds": 1,
+   "params": {
+    "code": "steane",
+    "method": "stabilizer",
+    "n_logical": 1,
+    "shots": 2000,
+    "seed": 7,
+    "actions": [
+     [
+      "X",
+      0
+     ],
+     [
+      "SE",
+      0
+     ]
+    ],
+    "noise": {
+     "p_gate": 0.01,
+     "p_1q": 0.005,
+     "p_meas": 0.01,
+     "p_idle": 0.002
+    }
+   },
+   "job_id": "f97f5898-4eaf-4a26-b2be-618a53ac3757",
+   "ms": 30013,
+   "result": {
+    "output": {
+     "code": "steane",
+     "corrections_applied": 1095,
+     "logical_error_count": 179,
+     "n_logical": 1,
+     "noise": {
+      "p_1q": 0.005,
+      "p_gate": 0.01,
+      "p_idle": 0.002,
+      "p_meas": 0.01
+     },
+     "per_logical": [
+      {
+       "expected": 1,
+       "logical_error_rate": 0.08950000000000002,
+       "logical_qubit": 0,
+       "success_rate": 0.9105
+      }
+     ],
+     "shots": 2000,
+     "simulator": {
+      "method": "stabilizer",
+      "transpiled": false
+     },
+     "success_rate": 0.9105,
+     "successful_shots": 1821,
+     "syndromes_detected": 1095
+    }
+   }
+  },
+  {
+   "level": "high",
+   "p": 0.01,
+   "rounds": 2,
+   "params": {
+    "code": "steane",
+    "method": "stabilizer",
+    "n_logical": 1,
+    "shots": 2000,
+    "seed": 7,
+    "actions": [
+     [
+      "X",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ]
+    ],
+    "noise": {
+     "p_gate": 0.01,
+     "p_1q": 0.005,
+     "p_meas": 0.01,
+     "p_idle": 0.002
+    }
+   },
+   "job_id": "8fb9dcc2-450f-431e-82f8-63f9c6f77d14",
+   "ms": 11982,
+   "result": {
+    "output": {
+     "code": "steane",
+     "corrections_applied": 2150,
+     "logical_error_count": 262,
+     "n_logical": 1,
+     "noise": {
+      "p_1q": 0.005,
+      "p_gate": 0.01,
+      "p_idle": 0.002,
+      "p_meas": 0.01
+     },
+     "per_logical": [
+      {
+       "expected": 1,
+       "logical_error_rate": 0.131,
+       "logical_qubit": 0,
+       "success_rate": 0.869
+      }
+     ],
+     "shots": 2000,
+     "simulator": {
+      "method": "stabilizer",
+      "transpiled": false
+     },
+     "success_rate": 0.869,
+     "successful_shots": 1738,
+     "syndromes_detected": 2150
+    }
+   }
+  },
+  {
+   "level": "high",
+   "p": 0.01,
+   "rounds": 4,
+   "params": {
+    "code": "steane",
+    "method": "stabilizer",
+    "n_logical": 1,
+    "shots": 2000,
+    "seed": 7,
+    "actions": [
+     [
+      "X",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ]
+    ],
+    "noise": {
+     "p_gate": 0.01,
+     "p_1q": 0.005,
+     "p_meas": 0.01,
+     "p_idle": 0.002
+    }
+   },
+   "job_id": "a5b4bdbf-da00-45c2-8641-0bd8b1efdeb2",
+   "ms": 24502,
+   "result": {
+    "output": {
+     "code": "steane",
+     "corrections_applied": 4227,
+     "logical_error_count": 388,
+     "n_logical": 1,
+     "noise": {
+      "p_1q": 0.005,
+      "p_gate": 0.01,
+      "p_idle": 0.002,
+      "p_meas": 0.01
+     },
+     "per_logical": [
+      {
+       "expected": 1,
+       "logical_error_rate": 0.19399999999999995,
+       "logical_qubit": 0,
+       "success_rate": 0.806
+      }
+     ],
+     "shots": 2000,
+     "simulator": {
+      "method": "stabilizer",
+      "transpiled": false
+     },
+     "success_rate": 0.806,
+     "successful_shots": 1612,
+     "syndromes_detected": 4227
+    }
+   }
+  },
+  {
+   "level": "high",
+   "p": 0.01,
+   "rounds": 8,
+   "params": {
+    "code": "steane",
+    "method": "stabilizer",
+    "n_logical": 1,
+    "shots": 2000,
+    "seed": 7,
+    "actions": [
+     [
+      "X",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ],
+     [
+      "SE",
+      0
+     ]
+    ],
+    "noise": {
+     "p_gate": 0.01,
+     "p_1q": 0.005,
+     "p_meas": 0.01,
+     "p_idle": 0.002
+    }
+   },
+   "job_id": "013c0ebc-2c01-47b0-ba95-1d212f3701c2",
+   "ms": 25939,
+   "result": {
+    "output": {
+     "code": "steane",
+     "corrections_applied": 8434,
+     "logical_error_count": 586,
+     "n_logical": 1,
+     "noise": {
+      "p_1q": 0.005,
+      "p_gate": 0.01,
+      "p_idle": 0.002,
+      "p_meas": 0.01
+     },
+     "per_logical": [
+      {
+       "expected": 1,
+       "logical_error_rate": 0.29300000000000004,
+       "logical_qubit": 0,
+       "success_rate": 0.707
+      }
+     ],
+     "shots": 2000,
+     "simulator": {
+      "method": "stabilizer",
+      "transpiled": false
+     },
+     "success_rate": 0.707,
+     "successful_shots": 1414,
+     "syndromes_detected": 8434
+    }
+   }
+  }
+ ]
+}

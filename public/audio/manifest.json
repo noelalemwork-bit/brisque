@@ -1,0 +1,12 @@
+{
+  "credits": "Music and sound effects by Aya Emara",
+  "music": {
+    "menu": "menu-cs-remix.mp3",
+    "early": "early-electronic.mp3",
+    "late": "late-classical.mp3"
+  },
+  "sfx": {
+    "click": "sfx-click.mp3",
+    "bombHit": "sfx-boom.mp3"
+  }
+}

@@ -1,0 +1,531 @@
+{
+ "about": "Every Moth Atlas engine output shipped with Brisque: engine, exact params, job id, timing. Regenerate with node tools/prerender/run.mjs.",
+ "entries": [
+  {
+   "recipe": "qpixl-slabs",
+   "engine": "qpixl-v1",
+   "why": "glitch slab offsets encoded through a noisy fake_marrakesh device (QPIXL)",
+   "params": {
+    "values": "400 floats (inputs.slabField 20x20), sha256 165891690e7d",
+    "mode": "emu",
+    "machine": "fake_marrakesh",
+    "shots": 2048,
+    "dynamic_range": "min_max",
+    "discretize": 0,
+    "allow_high_shots": false
+   },
+   "hash": "4f0feeb30f175b80",
+   "files": [
+    "generated/qpixl-v1/slabs.json"
+   ],
+   "job_id": "0851c255-d8b8-4974-a64a-b16bf7e68601",
+   "ms": 253381,
+   "date": "2026-10-05T19:08:06.240Z"
+  },
+  {
+   "recipe": "blur-board",
+   "engine": "blur-v1",
+   "why": "One image, one engine: a Brisque board screenshot through Quantum Blur",
+   "params": {
+    "strength": 0.3,
+    "reach": 0.05,
+    "style": "rx",
+    "size": 512,
+    "downscale": true,
+    "mask_bin_size": 4,
+    "mask_min_region": 16
+   },
+   "inputs": {
+    "image": {
+     "filename": "brisque-board.png",
+     "sha256": "50978ae2634bc03a396b10439427cca5128f0c7479f8c9ed7a7cbeac73f8acc8"
+    }
+   },
+   "hash": "7bb2647053100545",
+   "files": [
+    "release/submission/one-image/board-after-blur-v1.png"
+   ],
+   "job_id": "019c60a6-81d6-469e-95dc-0998f685d5ec",
+   "ms": 13148,
+   "date": "2026-10-05T19:44:55.080Z"
+  },
+  {
+   "recipe": "es-peaked",
+   "engine": "entanglement-shader-v1",
+   "why": "iridescent BSDF LUT for superposed ground + thread ribbons",
+   "params": {
+    "absorption": 0.95,
+    "incoming_rays": 8,
+    "interaction": 1,
+    "layers": 2,
+    "reflectance": 0.2,
+    "resolution": 64,
+    "style": "peaked"
+   },
+   "hash": "38973403dc043a7a",
+   "files": [
+    "generated/entanglement-shader-v1/peaked.png",
+    "generated/entanglement-shader-v1/peaked.json",
+    "generated/entanglement-shader-v1/peaked.glsl"
+   ],
+   "job_id": "76358dd0-842b-4f95-a245-bc3ba07c2de4",
+   "ms": 596195,
+   "date": "2026-10-05T19:07:58.142Z"
+  },
+  {
+   "recipe": "es-frustrated",
+   "engine": "entanglement-shader-v1",
+   "why": "second LUT (non-monotone colour) for contested metaballs",
+   "params": {
+    "absorption": 0.95,
+    "incoming_rays": 8,
+    "interaction": -1.5,
+    "layers": 2,
+    "reflectance": 0.35,
+    "resolution": 64,
+    "style": "frustrated"
+   },
+   "hash": "3077e32a9bf7d1ce",
+   "files": [
+    "generated/entanglement-shader-v1/frustrated.png",
+    "generated/entanglement-shader-v1/frustrated.json",
+    "generated/entanglement-shader-v1/frustrated.glsl"
+   ],
+   "job_id": "08eedc18-1cb0-439b-a856-57f5ce2aa15f",
+   "ms": 604465,
+   "date": "2026-10-05T19:08:06.508Z"
+  },
+  {
+   "recipe": "core-static",
+   "engine": "blur-core-v1",
+   "why": "8 frames of shot-noise \"quantum static\" (64x64x8 grid, frame axis untouched)",
+   "params": {
+    "values": "[64][64][8] grid (inputs.staticGrid), sha256 5496346fdb28",
+    "strength": [
+     0.1,
+     0.1,
+     0
+    ],
+    "reach": 0,
+    "style": "x",
+    "shots": 40000,
+    "max_qubits": 20
+   },
+   "hash": "eea9c8757044f3d1",
+   "files": [
+    "generated/blur-core-v1/static.png"
+   ],
+   "job_id": "0e4586c6-a18d-4113-95ea-a7a4cd64c044",
+   "ms": 35737,
+   "date": "2026-10-05T19:28:27.069Z"
+  },
+  {
+   "recipe": "tela-glitch",
+   "engine": "telablur-v1",
+   "why": "scan bars teleblurred into block noise: screen glitch streak texture",
+   "params": {
+    "direction": "horizontal",
+    "strength": 0.7,
+    "size": 256,
+    "downscale": true,
+    "mask_bin_size": 4,
+    "mask_min_region": 16
+   },
+   "inputs": {
+    "image1": {
+     "filename": "glitch-bars.png",
+     "sha256": "6bc0b503da8f45d92e87bc23992517b693405f7a94f8f0c4016edff8b2be403e"
+    },
+    "image2": {
+     "filename": "glitch-blocks.png",
+     "sha256": "8a65f86561b6512e6e0f9e30454cba83d7735c2d39a5449197f211bedc673441"
+    }
+   },
+   "hash": "27d0bd2c140ae807",
+   "files": [
+    "generated/telablur-v1/glitch.webp"
+   ],
+   "job_id": "498d967f-c65a-49c0-825f-39748bc9122e",
+   "ms": 15888,
+   "date": "2026-10-05T18:58:17.944Z"
+  },
+  {
+   "recipe": "blur-blast",
+   "engine": "blur-v1",
+   "why": "quantum blur dissolving the blast over time (ramped per-frame mask): impact sprite sheet",
+   "params": {
+    "strength": 0.65,
+    "reach": 0.15,
+    "style": "ry",
+    "size": 128,
+    "downscale": true,
+    "mask_bin_size": 4,
+    "mask_min_region": 16
+   },
+   "inputs": {
+    "image": {
+     "filename": "blast-sheet.png",
+     "sha256": "0e1b27b3a27a5806bf3f26601bbe2d912c7a6c077244eefb5b28ce75c80a8e5f"
+    },
+    "mask": {
+     "filename": "ramp-mask.png",
+     "sha256": "b77589326b711f7807581989149904df8771f972dd72f6aa03fed758f2d53ba3"
+    }
+   },
+   "hash": "772a8a03c85ff124",
+   "files": [
+    "generated/blur-v1/blast-sheet.webp"
+   ],
+   "job_id": "4d9fb702-02fb-4600-bd01-117b3b2e5742",
+   "ms": 14039,
+   "date": "2026-10-05T19:14:36.924Z"
+  },
+  {
+   "recipe": "blur-fried",
+   "engine": "blur-v1",
+   "why": "daisy chain: deep-fryer-v1 output -> blur-v1 (same ramped mask); preferred impact sheet",
+   "params": {
+    "strength": 0.65,
+    "reach": 0.15,
+    "style": "ry",
+    "size": 128,
+    "downscale": true,
+    "mask_bin_size": 4,
+    "mask_min_region": 16
+   },
+   "inputs": {
+    "image": {
+     "filename": "blast-fried.png",
+     "sha256": "daa4c07c52906d7c5db6e2a6628cb83b58a9eb96ca5da1c2219819df427c1804"
+    },
+    "mask": {
+     "filename": "ramp-mask.png",
+     "sha256": "b77589326b711f7807581989149904df8771f972dd72f6aa03fed758f2d53ba3"
+    }
+   },
+   "hash": "45c5e79828abd132",
+   "files": [
+    "generated/blur-v1/blast-fried-sheet.webp"
+   ],
+   "job_id": "e337239d-fc27-4ae8-9d94-5d1c08210df3",
+   "ms": 16122,
+   "date": "2026-10-05T19:57:35.748Z"
+  },
+  {
+   "recipe": "fry-blast",
+   "engine": "deep-fryer-v1",
+   "why": "quantum-fried bomb blast frames (chain step 1)",
+   "params": {
+    "gates": [
+     [
+      "rx",
+      0.7
+     ],
+     [
+      "ry",
+      0.45
+     ]
+    ],
+    "tile_size": 4,
+    "mask_bin_size": 4,
+    "mask_min_region": 16
+   },
+   "inputs": {
+    "image": {
+     "filename": "blast-sheet.png",
+     "sha256": "0e1b27b3a27a5806bf3f26601bbe2d912c7a6c077244eefb5b28ce75c80a8e5f"
+    }
+   },
+   "hash": "5a4b66e0614dc8b9",
+   "files": [
+    "generated/deep-fryer-v1/blast-fried.webp"
+   ],
+   "job_id": "1ada2ee3-c37a-479c-b804-a93744ecc3a1",
+   "ms": 726039,
+   "date": "2026-10-05T19:57:19.255Z"
+  },
+  {
+   "recipe": "tela-collapse-70",
+   "engine": "telablur-v1",
+   "why": "bomb collapse frame: superposed cloud teleblurred toward a point (strength 0.7)",
+   "params": {
+    "direction": "full",
+    "size": 128,
+    "downscale": true,
+    "mask_bin_size": 4,
+    "mask_min_region": 16,
+    "strength": 0.7
+   },
+   "inputs": {
+    "image1": {
+     "filename": "collapse-cloud.png",
+     "sha256": "4d8c39c678070b568b696cf66efdac9a27c68a9970f6c68a7a152df15ae8bb5c"
+    },
+    "image2": {
+     "filename": "collapse-point.png",
+     "sha256": "303f22dcab8089debc5089c25cf1a75e221ce3639256a1b8b13ca6541f484d24"
+    }
+   },
+   "hash": "dea9f70152cc6f13",
+   "files": [
+    "generated/telablur-v1/collapse-sheet.png"
+   ],
+   "job_id": "60511057-5450-4395-9068-9014ac4b9151",
+   "ms": 22876,
+   "date": "2026-10-05T22:45:33.275Z"
+  },
+  {
+   "recipe": "tela-collapse-100",
+   "engine": "telablur-v1",
+   "why": "bomb collapse frame: superposed cloud teleblurred toward a point (strength 1)",
+   "params": {
+    "direction": "full",
+    "size": 128,
+    "downscale": true,
+    "mask_bin_size": 4,
+    "mask_min_region": 16,
+    "strength": 1
+   },
+   "inputs": {
+    "image1": {
+     "filename": "collapse-cloud.png",
+     "sha256": "4d8c39c678070b568b696cf66efdac9a27c68a9970f6c68a7a152df15ae8bb5c"
+    },
+    "image2": {
+     "filename": "collapse-point.png",
+     "sha256": "303f22dcab8089debc5089c25cf1a75e221ce3639256a1b8b13ca6541f484d24"
+    }
+   },
+   "hash": "aa9dc32a0e1ac15c",
+   "files": [
+    "generated/telablur-v1/collapse-sheet.png"
+   ],
+   "job_id": "262c696a-c1e4-47e7-82c5-54eda132ff3a",
+   "ms": 23197,
+   "date": "2026-10-05T22:45:33.597Z"
+  },
+  {
+   "recipe": "tela-collapse-35",
+   "engine": "telablur-v1",
+   "why": "bomb collapse frame: superposed cloud teleblurred toward a point (strength 0.35)",
+   "params": {
+    "direction": "full",
+    "size": 128,
+    "downscale": true,
+    "mask_bin_size": 4,
+    "mask_min_region": 16,
+    "strength": 0.35
+   },
+   "inputs": {
+    "image1": {
+     "filename": "collapse-cloud.png",
+     "sha256": "4d8c39c678070b568b696cf66efdac9a27c68a9970f6c68a7a152df15ae8bb5c"
+    },
+    "image2": {
+     "filename": "collapse-point.png",
+     "sha256": "303f22dcab8089debc5089c25cf1a75e221ce3639256a1b8b13ca6541f484d24"
+    }
+   },
+   "hash": "3b3f5db9ca1c697d",
+   "files": [
+    "generated/telablur-v1/collapse-sheet.png"
+   ],
+   "job_id": "8b71f902-2879-45e4-9d95-d7ef475ec377",
+   "ms": 24320,
+   "date": "2026-10-05T22:45:34.715Z"
+  },
+  {
+   "recipe": "core-shock",
+   "engine": "blur-core-v1",
+   "why": "bomb collapse shockwave: 8 expanding rings (64x64x8 grid, frame axis untouched) quantum-blurred with shot noise",
+   "params": {
+    "values": "[64][64][8] grid (inputs.shockGrid), sha256 fc35f904e6c5",
+    "strength": [
+     0.14,
+     0.14,
+     0
+    ],
+    "reach": 0,
+    "style": "x",
+    "shots": 40000,
+    "max_qubits": 20
+   },
+   "hash": "4696e0c4c2c826ec",
+   "files": [
+    "generated/blur-core-v1/shock.png"
+   ],
+   "job_id": "a74430d3-bcad-4c9c-96e8-420216c166bc",
+   "ms": 38759,
+   "date": "2026-10-05T22:45:49.032Z"
+  },
+  {
+   "recipe": "tela-fork-25",
+   "engine": "telablur-v1",
+   "why": "split \"reality forks\" frame: one lobe teleblurred toward two (strength 0.25)",
+   "params": {
+    "direction": "full",
+    "size": 128,
+    "downscale": true,
+    "mask_bin_size": 4,
+    "mask_min_region": 16,
+    "strength": 0.25
+   },
+   "inputs": {
+    "image1": {
+     "filename": "fork-one.png",
+     "sha256": "681bd51e9474b9612abe270a086a3714685a32ea1a30078cd5c4b7440844a5a8"
+    },
+    "image2": {
+     "filename": "fork-two.png",
+     "sha256": "dd376c45fa53ef272c85c6e1f2c4d9e97666384e8722f2b85a36a6b7e8401d97"
+    }
+   },
+   "hash": "1ffa2d2f5da7fc64",
+   "files": [
+    "generated/telablur-v1/fork-sheet.png"
+   ],
+   "job_id": "bd919311-1f4d-42ae-b133-3263090e7c76",
+   "ms": 21606,
+   "date": "2026-10-05T22:45:31.992Z"
+  },
+  {
+   "recipe": "tela-fork-50",
+   "engine": "telablur-v1",
+   "why": "split \"reality forks\" frame: one lobe teleblurred toward two (strength 0.5)",
+   "params": {
+    "direction": "full",
+    "size": 128,
+    "downscale": true,
+    "mask_bin_size": 4,
+    "mask_min_region": 16,
+    "strength": 0.5
+   },
+   "inputs": {
+    "image1": {
+     "filename": "fork-one.png",
+     "sha256": "681bd51e9474b9612abe270a086a3714685a32ea1a30078cd5c4b7440844a5a8"
+    },
+    "image2": {
+     "filename": "fork-two.png",
+     "sha256": "dd376c45fa53ef272c85c6e1f2c4d9e97666384e8722f2b85a36a6b7e8401d97"
+    }
+   },
+   "hash": "c4e5bd0970ef3f50",
+   "files": [
+    "generated/telablur-v1/fork-sheet.png"
+   ],
+   "job_id": "ef118dd8-0268-4c9e-9354-6dd60b2f8924",
+   "ms": 19354,
+   "date": "2026-10-05T22:45:29.741Z"
+  },
+  {
+   "recipe": "tela-fork-75",
+   "engine": "telablur-v1",
+   "why": "split \"reality forks\" frame: one lobe teleblurred toward two (strength 0.75)",
+   "params": {
+    "direction": "full",
+    "size": 128,
+    "downscale": true,
+    "mask_bin_size": 4,
+    "mask_min_region": 16,
+    "strength": 0.75
+   },
+   "inputs": {
+    "image1": {
+     "filename": "fork-one.png",
+     "sha256": "681bd51e9474b9612abe270a086a3714685a32ea1a30078cd5c4b7440844a5a8"
+    },
+    "image2": {
+     "filename": "fork-two.png",
+     "sha256": "dd376c45fa53ef272c85c6e1f2c4d9e97666384e8722f2b85a36a6b7e8401d97"
+    }
+   },
+   "hash": "2e90e9eebdbb5b6e",
+   "files": [
+    "generated/telablur-v1/fork-sheet.png"
+   ],
+   "job_id": "81f0c8d9-e2f4-4bcf-98fd-05ab077459dd",
+   "ms": 21970,
+   "date": "2026-10-05T22:45:32.363Z"
+  },
+  {
+   "recipe": "tela-fork-100",
+   "engine": "telablur-v1",
+   "why": "split \"reality forks\" frame: one lobe teleblurred toward two (strength 1)",
+   "params": {
+    "direction": "full",
+    "size": 128,
+    "downscale": true,
+    "mask_bin_size": 4,
+    "mask_min_region": 16,
+    "strength": 1
+   },
+   "inputs": {
+    "image1": {
+     "filename": "fork-one.png",
+     "sha256": "681bd51e9474b9612abe270a086a3714685a32ea1a30078cd5c4b7440844a5a8"
+    },
+    "image2": {
+     "filename": "fork-two.png",
+     "sha256": "dd376c45fa53ef272c85c6e1f2c4d9e97666384e8722f2b85a36a6b7e8401d97"
+    }
+   },
+   "hash": "414dc37b369b0516",
+   "files": [
+    "generated/telablur-v1/fork-sheet.png"
+   ],
+   "job_id": "3846feee-8592-4ec6-9b77-918f54131d29",
+   "ms": 17763,
+   "date": "2026-10-05T22:45:28.156Z"
+  },
+  {
+   "recipe": "qrc-fork",
+   "engine": "qrc-image-v1",
+   "why": "daisy chain: telablur-v1 fork frames as the vocabulary of a quantum reservoir that generates the split effect's frame order",
+   "params": {
+    "training_sequence": [
+     "fork0.png",
+     "fork0.png",
+     "fork1.png",
+     "fork2.png",
+     "fork3.png",
+     "fork4.png",
+     "fork4.png",
+     "fork3.png",
+     "fork2.png",
+     "fork1.png",
+     "fork0.png",
+     "fork0.png",
+     "fork1.png",
+     "fork2.png",
+     "fork3.png",
+     "fork4.png",
+     "fork4.png",
+     "fork3.png",
+     "fork2.png",
+     "fork1.png"
+    ],
+    "length": 96,
+    "fps": 12,
+    "quality": "moderate",
+    "variation": 1,
+    "seed": 2026,
+    "periodic": true
+   },
+   "inputs": {
+    "vocabulary": {
+     "filename": "fork-vocab.zip",
+     "sha256": "8632234d395016b47065c361b3ea947cfd957313990b570a760f47287de10092"
+    }
+   },
+   "hash": "8f9272ab1cd17151",
+   "files": [
+    "generated/qrc-image-v1/fork-seq.json"
+   ],
+   "job_id": "2ac3cb01-6100-4443-b134-e8b215d8121d",
+   "ms": 75551,
+   "date": "2026-10-05T22:48:11.442Z"
+  }
+ ],
+ "updated": "2026-10-05T22:48:53.464Z"
+}

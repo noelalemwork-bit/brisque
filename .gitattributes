@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.mp3 binary
+*.mp4 binary
+*.wav binary
+*.wasm binary
+*.exr binary
+*.hdr binary
+*.zip binary

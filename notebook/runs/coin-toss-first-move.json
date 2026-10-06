@@ -1,0 +1,42 @@
+{
+ "label": "coin-toss-first-move",
+ "engine": "coin-toss-v1",
+ "params": {
+  "mode": "emu",
+  "shots": 1
+ },
+ "job_id": "6a84fc73-65ab-46e3-b45e-b8df0290ae05",
+ "status": "completed",
+ "timings": {
+  "submit_s": 1.517,
+  "fetch_s": 0.943,
+  "total_s": 5.749,
+  "queued_s": 1.608,
+  "processing_s": 1.681
+ },
+ "timeline": [
+  [
+   "submitted",
+   1.517
+  ],
+  [
+   "processing",
+   3.125
+  ],
+  [
+   "completed",
+   4.806
+  ]
+ ],
+ "result": {
+  "backend": "aer",
+  "heads": 0,
+  "ibm_job_id": "a33ae9ae4752497d992583110d4a3916",
+  "mode": "emu",
+  "output": "tails",
+  "shots": 1,
+  "tails": 1
+ },
+ "error": null,
+ "ran_at": "2026-10-05T22:40:49+0300"
+}

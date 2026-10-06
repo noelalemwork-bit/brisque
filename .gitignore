@@ -1,0 +1,45 @@
+# dependencies / build output
+node_modules/
+dist/
+release/
+.wrangler/
+.vite/
+
+# secrets: never commit
+.env
+.env.*
+!.env.example
+.dev.vars
+*.pem
+*.key
+
+# logs, run output, local tool state
+*.log
+*.err
+logs/
+tools/moth/*.err
+npm-debug.log*
+
+# AI assistant / chat transcripts and local notes
+.claude/
+CLAUDE.local.md
+*.jsonl
+chats/
+transcripts/
+scratch/
+.scratch/
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python (notebook tooling)
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+
+# Rust build output (plugin/)
+target/

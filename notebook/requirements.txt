@@ -1,0 +1,8 @@
+# Brisque x Moth workflow notebook
+requests>=2.31
+numpy>=1.26
+matplotlib>=3.8
+ipykernel>=6.29
+nbconvert>=7.16
+nbclient>=0.10
+# for interactive editing, also: pip install notebook   (or open the .ipynb in VS Code)
